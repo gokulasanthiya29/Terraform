@@ -1,7 +1,7 @@
 provider "aws"{
     region = "us-east-1"
-    access_key = "AKIAJ5GWJT3PIPZSPGAQ"
-    secret_key = "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"
+    access_key = "<access_key>"
+    secret_key = "<secret_key>"
 }
 
 resource "aws_vpc" "tf-project-vpc" {
