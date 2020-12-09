@@ -17,7 +17,7 @@ The major commands used in terraform are:
 
   While initializing, terraform automatically creates the necessary plugins under the specified provider to carry out the build processes in a '.Terraform' sub-
  directory. Here, the provider is "aws". And then with further commands, it creates a '.tfstate' file where-in it keeps the track of all the builds and 
- changes done thereby, it makes the reviewing easier.
+ changes done thereby, it makes the reviewing easier. 
 
 Some more commands that can prove out to be helpful in production environments:
 -- terraform state list - shows the list of resources provisioned using Terraform
@@ -25,6 +25,11 @@ Some more commands that can prove out to be helpful in production environments:
 -- terraform output - shows the exclusively codified output block result
 -- terraform refresh - to view the state and id of all configured resources
 
-Target Resources with '-target' flag, viz:
+Target Resources with '-target' flag, for instance
 -- terraform apply -target <recource_name>
 -- terraform destroy -target <resource_name>
+
+Variables, for code reuse, for instance
+'terraform.tfvars' default filename with .tfvars extension for variable assignment.
+If anyother filename is gvien with '.tfvars' extension, then in the output specify '-var-file <var_filename> along with commands'
+
