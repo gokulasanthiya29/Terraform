@@ -45,8 +45,10 @@ resource "aws_route_table" "tf-project-rt" {
 #}
 #variable = "tf-project-subnet-using-var" {
 #  description = "subnet creation"
-#} -> while explicitly defining the cidr_block(list format) using variables in 'terraform.tfvars' file
+#} -> while explicitly defining the cidr_block(list format in case of many variables and refer to them in main file as objects, 
+#for instance var.tf-project-subnet-var[0]) using variables in 'terraform.tfvars' file 
 
+        
 resource "aws_subnet" "tf-project-subnet" {
   vpc_id     = aws_vpc.tf-project-vpc.id
   cidr_block = "10.0.1.0/24" #cidr_block = var.tf-project-subnet-using-var -> while creating subnet using variables
