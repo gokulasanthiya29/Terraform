@@ -23,3 +23,5 @@ Some more commands:
 -- terraform state list - shows the list of resources provisioned using Terraform
 -- terraform state show <resource_id> - shows detatiled information about the particular resource
 -- terraform output - shows the exclusively codified output block result
+-- terraform refresh - to view the state and id of all configured resources, which can prove out to be helpful in production environments
+
