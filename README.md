@@ -19,4 +19,7 @@ The major commands used in terraform are:
  directory. Here, the provider is "aws". And then with further commands, it creates a '.tfstate' file where-in it keeps the track of all the builds and 
  changes done thereby, it makes the reviewing easier.
 
+Some more commands:
+-- terraform state list - shows the list of resources provisioned using Terraform
+-- terraform state show <resource_id> - shows detatiled information about the particular resource
 
