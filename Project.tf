@@ -130,3 +130,10 @@ resource "aws_instance" "tf-project-web-server" {
     Name = "tf-project-web-server"
   }
 }
+
+#for automatic view of configured resources ID
+output "vpc-id" {
+  value = "aws_vpc.tf-project-vpc.id"
+}
+
+    
