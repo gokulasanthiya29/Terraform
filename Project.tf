@@ -39,9 +39,17 @@ resource "aws_route_table" "tf-project-rt" {
   }
 }
 
+#variable = "tf-project-subnet-using-var" {
+#  decription = "subnet creation"
+#  default = 10.0.1.50/24
+#}
+#variable = "tf-project-subnet-using-var" {
+#  description = "subnet creation"
+#}
+
 resource "aws_subnet" "tf-project-subnet" {
   vpc_id     = aws_vpc.tf-project-vpc.id
-  cidr_block = "10.0.1.0/24"
+  cidr_block = "10.0.1.0/24" #cidr_block = var.tf-project-subnet-using-var -> while creating subnet using variables
   availability_zone = "us-east-1a"
 
   tags = {
